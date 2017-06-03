@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    color: white;
+    background-color: #1F2227;
+
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+p {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #6D9BC9;
+}
+
+#title {
+    margin-top: 10%;
+    margin-bottom: 0;
+    padding: 20px 0;
+
+    font-size: 100px;
+    font-weight: bolder;
+    color: white;
+}
+
+#phpver {
+    font-weight: bold;
+    color: #B5BDC6;
+}
+
+#links {
+    margin-top: 100px;
+}
