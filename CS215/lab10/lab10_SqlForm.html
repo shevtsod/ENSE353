@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    label {
+    	display: inline-block;
+    	width: 150px;
+    }
+    </style>
+</head>
+<body>
+<h2 style="color: red;">Disabled for security purposes!</h2>
+<form action="sqlphp.php" style="display: inline-block;" method="post">
+	<fieldset>
+	<legend><b>Add a Record</b></legend>
+	<label>ID:</label>
+	<input type="text" name="ID"><br/>
+	<label>First Name:</label>
+	<input type="text" name="firstname"><br/>
+	<label>Last Name:</label>
+	<input type="text" name="lastname"><br/>
+	<label></label>
+	<input type="submit" name="add" value="Add"><br/>
+	</fieldset>
+	<fieldset>
+	<legend><b>Query the Database (Enter * to see all)</b></legend>
+		<label>Search for Field:</label>
+	<input type="text" name="search" value = "*"><br/>
+	<input type="radio" name="column" value="ID"> ID 
+	<input type="radio" name="column" value="FirstName"> First Name 
+	<input type="radio" name="column" value="LastName"> Last Name<br/>
+	<label></label>
+	<input type="submit" name="query" value="Query"><br/>
+	</fieldset>
+</form>
+
+<br/><br/><hr/><br/>
+
+<a href="http://validator.w3.org/check?uri=referer" class="bwlink" id="validlink" target="_blank">
+	LINK TO VALIDATION OF THIS PAGE
+</a>
+
+<p>
+	<a href="/index.php">Return to main page.</a>
+</p>
+</body>
+</html>

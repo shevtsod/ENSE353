@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <title>Daniel Shevtsov - University of Regina</title>
+    <style>
+    	form {
+    		display: inline-block;
+    	}
+    	
+    	form .text {
+    		width: 300px;
+    		font-size: 14pt;
+    	}
+    	form legend {
+    		font-weight: bold;
+    		font-size: 16pt;
+    	}
+    	form .button {
+    		font-size: 14pt;
+    	}
+    </style>
+    <!-- AJAX Script -->
+	<script>
+		/**
+		 * Use AJAX to display query results.
+		 * Query is handled in PHP file show_records.php
+		 **/
+		function showUsers() {
+			var str = document.getElementById("text").value;
+		    if (str == "") {
+		        document.getElementById("query").innerHTML = "";
+		        return;
+		    } else {
+		        if (window.XMLHttpRequest) {
+		            // code for IE7+, Firefox, Chrome, Opera, Safari
+		            xmlhttp = new XMLHttpRequest();
+		        } else {
+		            // code for IE6, IE5
+		            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		        }
+		        xmlhttp.onreadystatechange = function() {
+		            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		                document.getElementById("query").innerHTML = xmlhttp.responseText;
+		            }
+		        };
+		        xmlhttp.open("GET","show_records.php?q="+str,true);
+		        xmlhttp.send();
+		    }
+		}
+	</script>
+</head>
+
+<body>
+<h2 style="color: red;">Disabled for security purposes!</h2>
+<!-- Page content starts here -->
+<form id="form1">
+	<fieldset>
+		<legend>Enter the first letter of the last name</legend>
+		<input type="text" class="text" id="text" autocomplete="off">
+		<input type="button" class="button" value="Search" onclick="showUsers()">
+	</fieldset>
+</form>
+
+<div id="query"></div>
+
+<!-- Page content ends here -->
+
+<script>
+	//Prevent page from reloading when pressing enter on text input.
+	//Act as if "Search" button was pressed instead.
+	document.getElementById("form1").addEventListener('submit', function(e) {e.preventDefault(); showUsers();}, false);
+</script>
+
+<br/><br/><hr/>
+
+<a href="http://validator.w3.org/check?uri=referer" class="bwlink" id="validlink" target="_blank">
+    LINK TO VALIDATION OF THIS PAGE
+</a>
+
+<p>
+    <a href="/index.php">Return to main page.</a>
+</p>
+</body>
+</html>

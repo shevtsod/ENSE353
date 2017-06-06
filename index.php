@@ -22,7 +22,8 @@
         <div class="section" id="course-links">
             <h2>Course Links</h2>
             <ul>
-                <li><a href="#" onclick="openModal('ense353')" id="ense353">ENSE353</a></li>
+                <li><a href="#" onclick="openModal('modal-ense215')" id="ense353">CS215</a></li>
+                <li><a href="#" onclick="openModal('modal-ense353')" id="ense353">ENSE353</a></li>
             </ul>
         </div>
 
@@ -40,13 +41,36 @@
         &copy; Copyright <?php echo date("Y"); ?>, Daniel Shevtsov
     </footer>
 
+    <div id="modal-ense215" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modal-ense215')">&times;</span>
+                <h2>CS215 Links</h2>
+            </div>
+            <ul>
+                <li><a href="CS215/lab1.php">Lab 1</a></li>
+                <li><a href="CS215/lab2.php">Lab 2</a></li>
+                <li><a href="CS215/lab3.php">Lab 3</a></li>
+                <li><a href="CS215/lab4.php">Lab 4</a></li>
+                <li><a href="CS215/lab5.php">Lab 5</a></li>
+                <li><a href="CS215/lab6.php">Lab 6</a></li>
+                <li><a href="CS215/lab7.php">Lab 7</a></li>
+                <li><a href="CS215/lab8.php">Lab 8</a></li>
+                <li><a href="CS215/lab9.php">Lab 9</a></li>
+                <li><a href="CS215/lab10.php">Lab 10</a></li>
+                <li><a href="CS215/lab11.php">Lab 11</a></li>
+                <li><a href="CS215/lab12.php">Lab 12</a></li>
+            </ul>       
+        </div>
+    </div>
+
     <div id="modal-ense353" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close" onclick="closeModal('ense353')">&times;</span>
+                <span class="close" onclick="closeModal('modal-ense353')">&times;</span>
                 <h2>ENSE353 Links</h2>
             </div>
-            <a href="info.php">PHPinfo</a>
+            <a href="ENSE353/lab3/info.php">Lab 3 - PHPinfo</a>
         </div>
     </div>
 

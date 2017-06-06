@@ -1,0 +1,29 @@
+body {
+	background-color: linen;
+}
+
+h2 {
+	font-family: "Times New Roman";
+}
+
+#temp1 {
+	background-color: #dddddd;
+	border:thin dotted #AAAAAA;
+}
+
+.evenRow {
+	background-color: yellow;
+}
+
+ol {
+	list-style-type: upper-roman;
+}
+
+table, th, td {
+	border: 1px solid red;
+	text-align: center;
+}
+
+a:hover {
+	color: magenta;
+}

@@ -1,0 +1,44 @@
+/* For small devices: */
+@media only screen and (max-width: 1219px) {
+	body {
+	    font-size:100%;
+	}
+	
+	section, aside {
+	    float: none;
+	    width: auto;
+	}
+	
+	header, section, footer, article, aside {
+		border-radius: 15px;
+		padding: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+	    text-align: justify;
+	}
+	
+	header,footer {
+	    margin-bottom:2.5px;
+	    text-align: center;
+	}
+	
+	footer{
+		clear: both;
+	}
+	
+	section h2, aside h2{
+	    display: none;
+	}
+	
+	article h2{
+	   display: initial;
+	   text-align: left;
+	   width: 100%;
+	}
+	
+	nav{
+		display:none;
+		margin: 0;
+		padding: 0;
+	}
+}

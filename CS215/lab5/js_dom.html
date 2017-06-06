@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+	    form {
+	    	display: inline-block;
+	    	width: 320px;
+	    }
+	    
+	    #u_id, #u_first, #u_last {
+	    	width: 150px;
+	    }
+	    
+	    form label {
+	    	display: inline-block;
+	    	width: 100px;
+	    }
+	    
+	    .errormsg {
+	    	color: red;
+	    	text-decoration: underline;
+	    	font-size: 10pt;
+	    	margin-left: 105px;
+	    }
+    </style>
+    <script type="text/javascript" src="dom_validate.js"></script>
+</head>
+<body>
+<form action="#" method="get">
+	<fieldset>
+		<p class="errormsg" id="id_msg"></p>
+		<label for="u_id">ID:</label>
+		<input type="text" id="u_id"><br/>
+		<p class="errormsg" id="first_msg"></p>
+		<label for="u_first">First Name:</label>
+		<input type="text" id="u_first"><br/>
+		<p class="errormsg" id="last_msg"></p>
+		<label for="u_last">Last Name:</label>
+		<input type="text" id="u_last"><br/>
+		<input type="button" value="Add" id ="button_add">
+	</fieldset>
+	<div id="display_info"></div>
+</form>
+<script type="text/javascript" src="domr.js"></script>
+<hr/>
+<a href="http://validator.w3.org/check?uri=referer" 
+target="_blank"
+style="text-align: center; bottom:0;">
+	LINK TO VALIDATION OF THIS PAGE
+</a>
+</body>
+</html>

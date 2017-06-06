@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="UTF-8">
+<title>Daniel Shevtsov - University of Regina</title>
+</head>
+<body>
+	<!-- JS form validation script -->
+	<script src="validate_form.js"></script>
+	
+	<div>
+		<form name="form1" style="display: inline-block;" method="post" 
+		onsubmit="return ValidateForm()">
+			<fieldset>
+				<legend><b>Personal Information</b></legend>
+				First name: <br/><input type="text" name="firstname"/><br/> 
+				Last name: <br/><input type="text" name="lastname"/><br/> 
+				<input type="radio" name="gender" value="male"/>Male
+				<input type="radio" name="gender" value="female"/>Female<br/>
+				Country: <br/>
+				<select name="country">
+					<option value="-">-</option>
+					<option value="australia">Australia</option>
+					<option value="Canada">Canada</option>
+					<option value="russia">Russia</option>
+					<option value="sweden">Sweden</option>
+					<option value="unitedstates">United States</option>
+				</select><br /> 
+				Address: <br/><input type="text" name="address"/><br/> 
+			</fieldset>
+			<fieldset>
+				<legend><b>Medical History</b></legend>
+				<input type="checkbox" name="mh" value="smallpox"/>Smallpox
+				<input type="checkbox" name="mh" value="mumps"/>Mumps
+				<input type="checkbox" name="mh" value="dizziness"/>Dizziness
+				<input type="checkbox" name="mh" value="sneezing"/>Sneezing<br/>
+			</fieldset>
+			<fieldset>
+				<legend><b>Current Medication</b></legend>
+				Are you currently taking any medication?
+				<br/>
+				<input type="radio" name="medconfirm" value="yes"/>Yes
+				<input type="radio" name="medconfirm" value="no"/>No
+				<br/>
+				If you are currently taking any medication, please indicate it in the space below:<br/>
+				<textarea name="currmed" rows="10" cols="50"></textarea>
+			</fieldset>
+			<br/>
+			<input type="submit" value="Submit"/> 
+			<input type="reset" value="Reset"/>
+		</form>
+		</div>
+
+
+	<p>
+		<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww2.cs.uregina.ca%2F~shevtsod%2Flabs%2Flab4%2Fjs_form.html">Link to validation of this page.</a>
+	</p>
+	
+	<p>
+		<a href="/~shevtsod/index.php">Return to main page.</a>
+	</p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Daniel Shevtsov - University of Regina</title>
+</head>
+<body>
+	<div>
+		<form style="display: inline-block;">
+			<fieldset>
+				<legend><b>Personal Information</b></legend>
+				First name: <br/><input type="text" name="firstname"/><br/> 
+				Last name: <br/><input type="text" name="lastname"/><br/> 
+				<input type="radio" name="gender" value="male" checked/>Male
+				<input type="radio" name="gender" value="female"/>Female<br/>
+				Country: <br/>
+				<select name="country">
+					<option value="australia">Australia</option>
+					<option value="Canada">Canada</option>
+					<option value="russia">Russia</option>
+					<option value="sweden">Sweden</option>
+					<option value="unitedstates">United States</option>
+				</select><br /> 
+			</fieldset>
+			<fieldset>
+				<legend><b>Medical History</b></legend>
+				<input type="checkbox" name="mh" value="smallpox"/>Smallpox
+				<input type="checkbox" name="mh" value="mumps"/>Mumps
+				<input type="checkbox" name="mh" value="dizziness"/>Dizziness
+				<input type="checkbox" name="mh" value="sneezing"/>Sneezing<br/>
+			</fieldset>
+			<fieldset>
+				<legend><b>Current Medication</b></legend>
+				If you are currently taking any medication, please indicate it in the space below:<br/>
+				<textarea name="currmed" rows="10" cols="50"></textarea>
+			</fieldset>
+			<br/>
+			<input type="submit" value="Submit"/> 
+			<input type="reset" value="reset"/>
+		</form>
+		</div>
+
+
+	<p>
+		<a href="http://validator.w3.org/check?uri=referer">
+			Link to validation of this page.
+		</a>
+	</p>
+	
+	<p>
+		<a href="/index.php">Return to main page.</a>
+	</p>
+
+</body>
+</html>

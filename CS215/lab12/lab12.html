@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <title>Daniel Shevtsov - University of Regina</title>
+    <style>
+#message{
+	padding-top: 1%;
+	margin: auto;
+	text-align: center;
+	color: red;
+}
+#result_table{
+	margin-top: 1%;
+	margin-bottom: 5%;
+}
+
+table {
+	width : 40%;
+	margin : 0 auto;
+	border-collapse : collapse;
+}
+
+table, th, td {
+	border : black solid 1px;
+	padding : 0.77%;
+}
+
+caption {
+	font-size : 1.5em;
+	margin-top: 5%;
+	margin-bottom: 1%;
+	text-transform: uppercase;
+}
+
+th {
+	text-align : center;
+	background-color : #BBBBBB;
+}
+
+td {
+	text-align : left;
+	width: 1%;
+}
+</style>
+
+<!-- Include JQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+setOptions();
+$(document).ready(function(){
+    $("#Add").click(function(){
+	var data1 = {
+		Add: $('input[name=Add]').val(),
+		LastName: $('input[name=LastName]').val(),
+		FirstName: $('input[name=FirstName]').val(),
+		ID: $('input[name=ID]').val()	
+	};
+	$.ajax({data:data1});
+    });
+    $("#Query").click(function(){
+	var data2 = {
+		Query: $('input[name=Query]').val(),
+		Searchname: $('input[name=Searchname]').val(),
+		radiobutton: $('input:radio[name=radiobutton]:checked').val()
+	};
+	$.ajax({data:data2});
+    });
+});
+
+
+function setOptions(){
+$.ajaxSetup({
+  url: 'lab12.php',
+  type: 'post',
+  dataType: 'json',
+  success: displayJsonData,
+  error: printerror
+});
+}
+
+function displayJsonData(myArr){
+    if(myArr==null || myArr.length<=0){
+    	$("#tbodyResult").empty();
+	return;
+    }
+
+ 
+    errmsg = myArr[0].errmsg;
+    $("#message").html(errmsg);
+
+    sql =myArr[0].sql;
+    $("#message").html(sql);
+    
+    var row="";
+    for(var i = 1; i < myArr.length; i++) {
+        row += '<tr><td>' + myArr[i].id + '</td>'; 
+        row += '<td>' + myArr[i].fn + '</td>'; 
+        row += '<td>' + myArr[i].ln + '</td></tr>'; 
+    }
+    
+    $("#tbodyResult").html(row);
+}
+
+function printerror() {
+   
+    $("#message").html();
+
+}
+</script>
+</head>
+<body>
+<h2 style="color: red;">Disabled for security purposes!</h2>
+<!-- Page content starts here -->
+
+<form id="form1">
+  <table>
+  <caption>Add a Record</caption>
+  <tr><td>ID: </td><td><input name = "ID" /></td></tr>
+  <tr><td>First Name:</td><td> <input name = "FirstName" /> </td></tr>
+  <tr><td>Last Name:</td><td> <input name = "LastName" /> </td></tr>
+  <tr><td colspan="2"><input type = "button" name="Add" id = "Add" value = "Add"/></td></tr>
+  </table>
+ 
+  <table> 
+  <caption> Query the Database (Enter * to see all) </caption> 
+  <tr>
+  	<td>Search for:</td> 
+  	<td><input name = "Searchname" /></td>
+  </tr>
+  <tr>
+  	<td>Field:</td>
+  	<td><input type="radio" name="radiobutton" value="ID" />
+  ID
+  <input type="radio" name="radiobutton" value="FirstName" />
+  First Name 
+  <input type="radio" name="radiobutton" value="LastName" />
+  Last Name</td>
+  </tr>  
+  <tr>
+  	<td colspan="2"><input type = "button" id = "Query" name="Query" value = "Query"/></td>
+  </tr>  
+ </table>
+ </form> 
+ 
+ <div id="message"></div>
+
+<table id="result_table">
+<caption>Query Results</caption>
+<thead>
+	<tr>
+		<th>ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+	</tr>
+</thead>
+<tbody id="tbodyResult">
+</tbody>
+</table>
+
+<!-- Page content ends here -->
+
+<br/><br/><hr/>
+
+<a href="http://validator.w3.org/check?uri=referer" class="bwlink" id="validlink" target="_blank">
+    LINK TO VALIDATION OF THIS PAGE
+</a>
+
+<p>
+    <a href="/index.php">Return to main page.</a>
+</p>
+</body>
+</html>
