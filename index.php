@@ -41,12 +41,13 @@
         &copy; Copyright <?php echo date("Y"); ?>, Daniel Shevtsov
     </footer>
 
-    <div id="modal-ense215" class="modal">
+    <div id="modal-ense215" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal('modal-ense215')">&times;</span>
-                <h2>CS215 Links</h2>
+                <h2>CS215</h2>
             </div>
+            <h4>Web and Database Programming (Summer 2016)</h4>
             <ul>
                 <li><a href="CS215/lab1.php">Lab 1</a></li>
                 <li><a href="CS215/lab2.php">Lab 2</a></li>
@@ -64,13 +65,16 @@
         </div>
     </div>
 
-    <div id="modal-ense353" class="modal">
+    <div id="modal-ense353" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal('modal-ense353')">&times;</span>
-                <h2>ENSE353 Links</h2>
+                <h2>ENSE353</h2>
             </div>
-            <a href="ENSE353/lab3/info.php">Lab 3 - PHPinfo</a>
+            <h4>Software Design and Architecture (Summer 2017)</h4>
+            <ul>
+                <li><a href="ENSE353/lab3/info.php">Lab 3 - PHPinfo</a></li>
+            </ul>           
         </div>
     </div>
 

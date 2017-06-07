@@ -1,24 +1,29 @@
 var content = document.getElementById("content");
+var modals = document.getElementsByClassName("modal");
+
 var colors = ['#171A1D', '#1A171D', '#1D1717', '#1D1D17', '#171D17'];
-var index = 1;
+var colorIndex = 1;
 
 /*
-  Close all modals and change body color to next color in colors array
+  Change body color to next color in colors array
 */
 content.onclick = function(e) {
     if(e.target != content)
         return;
 
-    var modals = document.getElementsByClassName("modal");
-    //Close all modals
-    [].forEach.call(modals, function(modal) {
-            closeModal(modal.id);
-    });
+    document.body.style.background = colors[colorIndex++];
 
     //Change color to next color in array
-    document.body.style.background = colors[index++];
-    if(index == colors.length)
-        index = 0;
+    if(colorIndex == colors.length)
+        colorIndex = 0;
+}
+
+for(var i = 0; i < modals.length; i++) {
+    modals[i].onclick = function(e) {
+        if(e.target.className != "modal")
+            return;
+        closeModal(e.target.id);
+    }
 }
 
 /***************************************************************/
