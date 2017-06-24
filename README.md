@@ -30,5 +30,4 @@ Installed and configured a DNS server for the Linux machine and used it to obtai
 Cloned LetsEncrypt Client (Certbot) to obtain a valid certificate for the server from the Let's Encrypt CA.
 
 ## Known Issues
-*   Modals do not open in some browsers (discovered on Microsoft Edge)
-*   Flexbox alignment breaks in older IE browsers
+*   Low framerate in transition between background colors on click.
