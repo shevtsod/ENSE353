@@ -20,15 +20,15 @@
         </div>
 
         <div class="section" id="course-links">
-            <h2>Course Links</h2>
+            <h2>Courses</h2>
             <ul>
-                <li><a href="#" onclick="openModal('modal-ense215')" id="ense353">CS215</a></li>
-                <li><a href="#" onclick="openModal('modal-ense353')" id="ense353">ENSE353</a></li>
+                <li><a href="javascript:void(0)" onclick="openModal('modal-ense215')" id="ense353">CS215</a></li>
+                <li><a href="javascript:void(0)" onclick="openModal('modal-ense353')" id="ense353">ENSE353</a></li>
             </ul>
         </div>
 
         <div class="section" id="other-links">
-            <h2>Other Links</h2>
+            <h2>Other</h2>
             <ul>
                 <li>
                     <a href="https://github.com/shevtsod"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>

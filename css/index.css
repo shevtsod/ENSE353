@@ -22,6 +22,7 @@ body {
     color: #A1A1A1;
     background-color: #171A1D;
     
+    -webkit-transition: background-color 1s linear;
     transition: background-color 1s linear;
 }
 
