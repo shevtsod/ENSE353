@@ -27,7 +27,7 @@ and installed SSL to self-sign a certificate for the server.
 
 ### Lab 5 - DNS and Let's Encrypt
 Installed and configured a DNS server for the Linux machine and used it to obtain a domain name (provided by the instructor). 
-Cloned LetsEncrypt Client (Certbot) to obtain a valid certificate for the server from the Let's Encrypt CA.
+Cloned [Let's Encrypt Client (Certbot)](https://github.com/certbot/certbot) to obtain a valid certificate for the server from the Let's Encrypt CA.
 
 ## Known Issues
 *   Low framerate in transition between background colors on click.
