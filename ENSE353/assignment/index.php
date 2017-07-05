@@ -27,7 +27,14 @@
     </form>
 </div>
 
-<?php /*
+<?php 
+    require_once 'phpClass/sqlQuery.php';
+
+    $sql = new sqlQuery;
+
+    echo $sql->getMaxID();
+
+    /*
     require_once 'phpClass/Mailer.php';
 
     $mail = new Mailer;
