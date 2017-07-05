@@ -4,7 +4,7 @@ My work in the ENSE 353 (Software Design and Architecture) labs and assignments.
 >**Have a look at the final product at <https://daniel.ursse.org>**
 
 ## Overview
-> **Assignment** - LAMP Stack Email Subscription Service
+> **Assignment** - LAMP Stack Email Subscription Service  
 > **Lab 1** - CentOS Installation  
 > **Lab 2** - Ethernet Cables and Network Configuration  
 > **Lab 3** - LAMP Stack Installation  
@@ -40,4 +40,4 @@ send and receive emails. Installed denyhosts to prevent unwanted login attempts 
 prevent POODLE attack.
 
 ## Known Issues
-*   Low framerate in transition between background colors on click.
+*   index.php - Low framerate in transition between background colors on click.
