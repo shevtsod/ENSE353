@@ -75,6 +75,7 @@
             <ul>
                 <li><a href="ENSE353/lab3/info.php">Lab 3 - PHPinfo</a></li>
                 <li><a href="webmail">Lab 6 - Webmail</a></li>
+                <li><a href="ENSE353/assignment/index.php">Subscription Service Assignment</a></li>
             </ul>           
         </div>
     </div>
