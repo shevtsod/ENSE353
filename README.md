@@ -9,6 +9,7 @@ My work in the ENSE 353 (Software Design and Architecture) labs. Also includes p
 > **Lab 3** - LAMP Stack Installation  
 > **Lab 4** - phpMyAdmin, NTP, HTTPS, and self-signed SSL Certificate  
 > **Lab 5** - DNS and Let's Encrypt  
+> **Lab 6** - SMTP, IMAP, denyhosts, and POODLE Attack  
 
 ## Details
 ### Lab 1 - CentOS Installation
@@ -28,6 +29,11 @@ and installed SSL to self-sign a certificate for the server.
 ### Lab 5 - DNS and Let's Encrypt
 Installed and configured a DNS server for the Linux machine and used it to obtain a domain name (provided by the instructor). 
 Cloned [Let's Encrypt Client (Certbot)](https://github.com/certbot/certbot) to obtain a valid certificate for the server from the Let's Encrypt CA.
+
+### Lab 6 - SMTP, IMAP denyhosts, and POODLE Attack
+Installed *sendmail* SMTP message transfer agent, *dovecot* IMAP server, and *squirrelmail* web email GUI to allow the Linux machine to
+send and receive emails. Installed denyhosts to prevent unwanted login attempts to the machine, and disabled SSLv3 in Apache server to
+prevent POODLE attack.
 
 ## Known Issues
 *   Low framerate in transition between background colors on click.

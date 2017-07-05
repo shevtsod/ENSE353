@@ -11,7 +11,7 @@
 <body>
 
 <h1>Subscription Service</h1>
-<h3>ENSE 353 Assignment</h3>
+<h2>ENSE 353 Assignment</h2>
 <p>Daniel Shevtsov (SID: 200351253)</p>
 
 <div class="form" id="form_login">
