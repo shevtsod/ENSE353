@@ -6,13 +6,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <meta name="theme-color" content="#000000">
     <title>Daniel Shevtsov</title>
-    <link rel="stylesheet" type="text/css" href="css/assignment.css"
+    <link rel="stylesheet" type="text/css" href="css/assignment.css">
+    <!-- Roboto Font by Google Fonts (https://fonts.google.com/specimen/Roboto) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 
 <h1>Subscription Service</h1>
 <h2>ENSE 353 Assignment</h2>
-<p>Daniel Shevtsov (SID: 200351253)</p>
+<p>Daniel Shevtsov</p>
 
 <div class="form" id="form_login">
     <h3>Sign Up/Login</h3>

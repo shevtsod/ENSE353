@@ -1,7 +1,14 @@
+*:not(input) {
+    color: #A1A1A1;
+    background-color: #171A1D;
+}
+
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -11,6 +18,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
     font-size: 3em;
+    text-transform: uppercase;
 }
 
 body, div, form {
@@ -28,6 +36,11 @@ body, div, form {
 form > * {
     display: block;
     margin: 5px 0;
+}
+
+form > input {
+    padding: 6px;
+    border-radius: 6px;
 }
 
 form > input[type=submit] {

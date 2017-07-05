@@ -1,9 +1,10 @@
 # ENSE353
-My work in the ENSE 353 (Software Design and Architecture) labs. Also includes past work done in CS215 (Web and Database Programming).
+My work in the ENSE 353 (Software Design and Architecture) labs and assignments. Also includes past work done in CS215 (Web and Database Programming).
 
 >**Have a look at the final product at <https://daniel.ursse.org>**
 
 ## Overview
+> **Assignment** - LAMP Stack Email Subscription Service
 > **Lab 1** - CentOS Installation  
 > **Lab 2** - Ethernet Cables and Network Configuration  
 > **Lab 3** - LAMP Stack Installation  
@@ -12,6 +13,9 @@ My work in the ENSE 353 (Software Design and Architecture) labs. Also includes p
 > **Lab 6** - SMTP, IMAP, denyhosts, and POODLE Attack  
 
 ## Details
+### Assignment - LAMP Stack Email Subscription Service
+Email subscription service made with LAMP stack that allows registering, verifying email, logging in, and changing subscriptions.
+
 ### Lab 1 - CentOS Installation
 Installed RAM, HDD, keyboard and mouse to a given server machine and installed the CentOS 7 Linux Distribution.
 
