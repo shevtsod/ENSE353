@@ -7,8 +7,6 @@
     <meta name="theme-color" content="#000000">
     <title>Daniel Shevtsov</title>
     <link rel="stylesheet" type="text/css" href="css/assignment.css">
-    <!-- Roboto Font by Google Fonts (https://fonts.google.com/specimen/Roboto) -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 
@@ -16,9 +14,9 @@
 <h2>ENSE 353 Assignment</h2>
 <p>Daniel Shevtsov</p>
 
-<div class="form" id="form_login">
+<div class="content" id="form-login">
     <h3>Sign Up/Login</h3>
-    <form>
+    <form method=POST action="login.php">
         <label for="email">Email:</label>
         <input id="email" type="text" name="email">
         <label for="password">Password:</label>
@@ -27,25 +25,6 @@
     </form>
 </div>
 
-<?php 
-    require_once 'phpClass/sqlQuery.php';
-
-    $sql = new sqlQuery;
-
-    echo $sql->getMaxID();
-
-    /*
-    require_once 'phpClass/Mailer.php';
-
-    $mail = new Mailer;
-
-    $to = 'i965215@mvrht.net';
-    $link = 'http://127.0.0.1/';
-    
-    echo "Sending mail to " . $to;
-    
-    $mail->sendVerification($to, $link);
-    */
-?>
+<script src="js/assignment.js"></script>
 </body>
 </html>

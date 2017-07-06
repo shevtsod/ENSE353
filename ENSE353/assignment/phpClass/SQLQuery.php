@@ -3,7 +3,7 @@ require_once 'SQLWrapper.php';
 
 class SQLQuery {
     private $sql = null;
-    private $tablename = "subscribers";
+    private $tablename = 'subscribers';
 
     /*
         Constructor for SQLQuery object
@@ -23,11 +23,11 @@ class SQLQuery {
         Generate the $tablename table in the database
     */
     public function generateTable() {
-        $params = array(':tablename' => $this->tablename);
-        $stmt = "CREATE TABLE `:tablename` (
+        $stmt = "CREATE TABLE $this->tablename (
                  `id` int(11) NOT NULL,
                  `email` varchar(255) NOT NULL,
                  `password` varchar(255) NOT NULL,
+                 `active` tinyint(1) DEFAULT 0,
                  `optionA` tinyint(1) DEFAULT 0,
                  `optionB` tinyint(1) DEFAULT 0,
                  `optionC` tinyint(1) DEFAULT 0,
@@ -35,21 +35,7 @@ class SQLQuery {
                  UNIQUE KEY `id` (`id`)
                 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT";
 
-        $this->sql->query($params, $stmt);
-    }
-
-    /*
-        Inserts a signed up user into the database
-        Params:
-            $username - Username string
-            $password - Password string
-    */
-    public function signUp($username, $password) {
-        //NOTE: Going to have to use plain text passwords. 
-        //Required to use vanilla PHP 5.4.16 which doesn't support the
-        //password hashing functionality added in PHP 5.5
-        //See: http://php.net/manual/en/function.password-hash.php
-
+        $this->sql->query(null, $stmt);
     }
 
     /*
@@ -58,14 +44,75 @@ class SQLQuery {
             maximum ID integer, 0 if no users
     */
     public function getMaxID() {
-        $params = array(':tablename' => $this->tablename);
-        $stmt = "SELECT id FROM subscribers ORDER BY id DESC LIMIT 1";
-        $result = $this->sql->query($params, $stmt);
+        $stmt = "SELECT id FROM `$this->tablename` ORDER BY id DESC LIMIT 1";
+        $result = $this->sql->query(null, $stmt);
         
         if(empty($result))
             return 0;
         else
             return $result[0]['id'];
+    }
+
+    /*
+        Inserts a signed up user into the database
+        Params:
+            $email - email string
+            $password - Hashed password string
+    */
+    public function signUp($email, $password) {
+        $id = $this->getMaxID() + 1;
+        $params = array(':id' => $id,
+                        ':email' => $email,
+                        ':password' => $password);
+        $stmt = "INSERT INTO `$this->tablename` (id, email, password) VALUES (:id, :email, :password)";
+        $this->sql->query($params, $stmt);
+        
+    }
+
+    /*
+        Return whether a user with the given email exists already in the table
+        Params:
+            $email - email string
+        Return:
+            boolean user exists
+    */
+    public function userExists($email) {
+        $params = array(':email' => $email);
+        $stmt = "SELECT * FROM `$this->tablename` WHERE email = :email";
+        $result = $this->sql->query($params, $stmt);
+
+        return(!empty($result));
+    }
+
+    /*
+        Return whether a user with the given email has verified their email
+        and their account is active
+        Params:
+            $email - email string
+        Return:
+            boolean user activated
+    */
+    public function userActivated($email) {
+        $params = array(':email' => $email);
+        $stmt = "SELECT active FROM `$this->tablename` WHERE email = :email LIMIT 1";
+        $result = $this->sql->query($params, $stmt);
+
+        return( $result[0]['active']);
+    }
+
+    /*
+        Return a user's hash from the database to confirm a login password
+        Params:
+            $email - email string
+        Return:
+            string password hash
+    */
+    public function getHash($email) {
+        $params = array(':email' => $email);
+        $stmt = "SELECT password FROM `$this->tablename` WHERE email = :email LIMIT 1";
+        $result = $this->sql->query($params, $stmt);
+
+        return($result[0]['password']);
     }
 }
 ?>

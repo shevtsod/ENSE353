@@ -7,8 +7,6 @@
     <meta name="theme-color" content="#000000">
     <title>Daniel Shevtsov</title>
     <link rel="stylesheet" href="css/index.css">
-    <!-- Roboto Font by Google Fonts (https://fonts.google.com/specimen/Roboto) -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
     <div id="content">

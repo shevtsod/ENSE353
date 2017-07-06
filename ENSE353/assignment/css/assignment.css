@@ -1,17 +1,25 @@
-*:not(input) {
-    color: #A1A1A1;
+html, body {
+    height: 100%;
+    margin: 0;
+
+    font-family: sans-serif;
+
     background-color: #171A1D;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-
-    font-family: 'Roboto', sans-serif;
+body, #form-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+body * {
+    flex: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, label {
+    color: #A1A1A1;
     padding: 0;
     margin: 0;
 }
@@ -21,19 +29,26 @@ h1 {
     text-transform: uppercase;
 }
 
-body, div, form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
+a, a:visited {
+    text-decoration: none;
+    color: #81a2be;
+
+    transition: color 0.5s;
 }
 
-.form {
+a:hover {
+    text-decoration: underline;
+    color: #516DB3;
+
+    transition: color 0s;
+}
+
+.content {
     margin-top: 40px;
+    text-align: center;
 }
 
-form > * {
+form * {
     display: block;
     margin: 5px 0;
 }
@@ -45,4 +60,48 @@ form > input {
 
 form > input[type=submit] {
     margin-top: 10px;
+}
+
+
+
+/*      PASSWORD NOTICE     */
+
+#password-notice {
+    display: block;
+    height: 100px;
+    width: 60%;
+    position: fixed;
+    z-index: 1;
+
+    bottom: 0;
+
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+#password-notice-header {
+    float: right;
+    padding: 0 5px;
+}
+
+.close {
+    color: #AAAAAA;
+    float: right;
+    font-weight: bold;
+    font-size: 30px !important;
+}
+
+.close:hover, .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#password-notice-content {
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+#password-notice-content h3 {
+    color: #A13D3D;
 }
