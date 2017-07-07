@@ -16,10 +16,15 @@
         <?php
             require_once 'phpClass/sqlQuery.php';
 
-            $sql = new sqlQuery;
-            $email = $_SESSION['email'];
+            //Check that the session is set
+            if(!isset($_SESSION['email'])) {
+                echo "Error: not logged in!";
+            } else {
+                $sql = new sqlQuery;
+                $email = $_SESSION['email'];
 
-            echo "Preferences Page for $email";
+                echo "Preferences Page for $email";
+            }
         ?>
         <br><br>
         <a href="logout.php">Click here to log out and return to the main page</a>
