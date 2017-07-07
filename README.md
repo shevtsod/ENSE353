@@ -40,4 +40,5 @@ send and receive emails. Installed denyhosts to prevent unwanted login attempts 
 prevent POODLE attack.
 
 ## Known Issues
+*   index.php - Background transition CSS effect causes a fade from white when first opening the page.
 *   index.php - Low framerate in transition between background colors on click.

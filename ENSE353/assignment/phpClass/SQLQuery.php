@@ -97,7 +97,19 @@ class SQLQuery {
         $stmt = "SELECT active FROM `$this->tablename` WHERE email = :email LIMIT 1";
         $result = $this->sql->query($params, $stmt);
 
-        return( $result[0]['active']);
+        return((bool) $result[0]['active']);
+    }
+
+
+    /*
+        Verify a user with the given email (set the active boolean)
+        Params:
+            $email - email string
+    */
+    public function activateUser($email) {
+        $params = array(':email' => $email);
+        $stmt = "UPDATE `$this->tablename` SET active = 1 WHERE email = :email";
+        $this->sql->query($params, $stmt);
     }
 
     /*
@@ -111,6 +123,9 @@ class SQLQuery {
         $params = array(':email' => $email);
         $stmt = "SELECT password FROM `$this->tablename` WHERE email = :email LIMIT 1";
         $result = $this->sql->query($params, $stmt);
+
+        if(empty($result))
+            return null;
 
         return($result[0]['password']);
     }
