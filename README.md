@@ -40,7 +40,7 @@ Installed *sendmail* SMTP message transfer agent, *dovecot* IMAP server, and *sq
 send and receive emails. Installed denyhosts to prevent unwanted login attempts to the machine, and disabled SSLv3 in Apache server to
 prevent POODLE attack.
 
-###Lab 7 - KDE, VNC, and Virtual Machines
+### Lab 7 - KDE, VNC, and Virtual Machines
 Installed *KDE Plasma* GUI Desktop environment, *TigerVNC* server and *TightVNC* client to connect to the machine remotely, and *Oracle VM VirtualBox*
 to run VMs of other Operating Systems on the machine.
 
