@@ -81,7 +81,7 @@ class SQLQuery {
         $stmt = "SELECT * FROM `$this->tablename` WHERE email = :email";
         $result = $this->sql->query($params, $stmt);
 
-        return(!empty($result));
+        return !empty($result);
     }
 
     /*
@@ -97,7 +97,7 @@ class SQLQuery {
         $stmt = "SELECT active FROM `$this->tablename` WHERE email = :email LIMIT 1";
         $result = $this->sql->query($params, $stmt);
 
-        return((bool) $result[0]['active']);
+        return (bool) $result[0]['active'];
     }
 
 
@@ -127,7 +127,36 @@ class SQLQuery {
         if(empty($result))
             return null;
 
-        return($result[0]['password']);
+        return $result[0]['password'];
+    }
+
+    /*
+        Returns an array containing all users in the table
+        Return:
+            2D array containing all rows in the table
+    */
+    public function getUsers() {
+        $stmt = "SELECT * FROM `$this->tablename`";
+        return $this->sql->query(array(), $stmt);
+    }
+
+    /*
+        Return whether the user with the given email has selected the given option or not
+        Params:
+            $email - email string
+            $option - option string (optionA, optionB, etc.)
+        Return:
+            boolean option selected
+    */
+    public function getOption($email, $option) {
+        $params = array(':email' => $email, ':option' => $option);
+        $stmt = "SELECT :option FROM `$this->tablename` WHERE email = :email LIMIT 1";
+        $result = $this->sql->query($params, $stmt);
+
+        if(empty($result))
+            return false;
+
+        return (bool) $result[0][$option];
     }
 }
 ?>

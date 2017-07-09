@@ -73,6 +73,9 @@ form > input[type=submit]:hover {
     cursor: pointer;
 }
 
+.spacer {
+    margin: 100px 0;
+}
 
 
 /*      PASSWORD NOTICE     */
@@ -113,6 +116,55 @@ form > input[type=submit]:hover {
     margin-left: 15px;
 }
 
-#password-notice-content h3 {
+#password-notice-content h3, .warning {
     color: #A13D3D;
+}
+
+
+/*      TABLE      */
+
+table {
+    color: #A1A1A1;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border: 2px solid #343E46;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #516DB3;
+    padding: 10px;
+    border: 1px solid #343E46;
+}
+
+tbody tr:first-child > th:first-child {
+    border-top-left-radius: 4px;
+}
+
+tbody tr:first-child > th:last-child {
+    border-top-right-radius: 4px;
+}
+
+tr td {
+    padding: 10px;
+    border: 1px solid #343E46;
+}
+
+tr td:last-child {
+    padding: 0;
+}
+
+td form {
+    display: block !important;
+    height: 100%;
+    width: 100%;
+}
+
+table input[type="submit"] {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
 }

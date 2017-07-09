@@ -1,6 +1,6 @@
 <?php
 class URL {
-    const URL_BASE = "http://192.168.1.115/ENSE353/assignment/";
+    const URL_BASE = "http://localhost/ENSE353/assignment/";
 
     public static function urlBase() {
         return self::URL_BASE;
@@ -12,6 +12,10 @@ class URL {
 
     public static function urlSubscriptions() {
         return self::URL_BASE . "subscriptions.php";   
+    }
+
+    public static function urlAdmin() {
+        return self::URL_BASE . "admin.php";   
     }
 }
 ?>
