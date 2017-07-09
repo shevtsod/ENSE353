@@ -18,7 +18,7 @@
     <p>
         <?php
             require_once "phpClass/private/URL.php";
-            require_once 'phpClass/sqlQuery.php';
+            require_once 'phpClass/SQLQuery.php';
 
             //This file handles changes made and submitted in the form in subscriptions.php
 

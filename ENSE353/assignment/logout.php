@@ -1,7 +1,5 @@
 <?php
-error_reporting(0);
-
-require_once "phpClass/private/url.php";
+require_once "phpClass/private/URL.php";
 
 session_start();
 

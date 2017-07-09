@@ -13,8 +13,8 @@
 <div class="content">
     <p><b>
         <?php
-            require_once "phpClass/private/url.php";
-            require_once 'phpClass/sqlQuery.php';
+            require_once "phpClass/private/URL.php";
+            require_once 'phpClass/SQLQuery.php';
             //Required to use vanilla PHP 5.4.16 which doesn't support the
             //password hashing functionality added in PHP 5.5
             //Using password_compat (https://github.com/ircmaxell/password_compat)

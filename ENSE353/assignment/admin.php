@@ -23,7 +23,7 @@
             die();
         }
 
-        require_once 'phpClass/sqlQuery.php';
+        require_once 'phpClass/SQLQuery.php';
 
         $sql = new sqlQuery;
         $users = $sql->getUsers();

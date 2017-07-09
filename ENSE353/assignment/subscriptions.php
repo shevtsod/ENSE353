@@ -18,7 +18,7 @@
     <p>
     <?php
         require_once "phpClass/private/URL.php";
-        require_once 'phpClass/sqlQuery.php';
+        require_once 'phpClass/SQLQuery.php';
 
         $sql = new sqlQuery;
         $admin = false;
