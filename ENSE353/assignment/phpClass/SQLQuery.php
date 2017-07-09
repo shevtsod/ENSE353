@@ -1,5 +1,5 @@
 <?php
-require_once 'SQLWrapper.php';
+require_once 'private/SQLWrapper.php';
 
 class SQLQuery {
     private $sql = null;

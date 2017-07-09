@@ -8,6 +8,6 @@
     <title>Daniel Shevtsov</title>
 </head>
 <body>
-    <?= phpinfo(); ?>
+    <?php phpinfo(); ?>
 </body>
 </html>

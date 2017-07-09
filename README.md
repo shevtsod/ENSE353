@@ -11,6 +11,7 @@ My work in the ENSE 353 (Software Design and Architecture) labs and assignments.
 > **Lab 4** - phpMyAdmin, NTP, HTTPS, and self-signed SSL Certificate  
 > **Lab 5** - DNS and Let's Encrypt  
 > **Lab 6** - SMTP, IMAP, denyhosts, and POODLE Attack  
+> **Lab 7** - KDE, VNC, and Virtual Machines  
 
 ## Details
 ### Assignment - LAMP Stack Email Subscription Service
@@ -38,6 +39,10 @@ Cloned [Let's Encrypt Client (Certbot)](https://github.com/certbot/certbot) to o
 Installed *sendmail* SMTP message transfer agent, *dovecot* IMAP server, and *squirrelmail* web email GUI to allow the Linux machine to
 send and receive emails. Installed denyhosts to prevent unwanted login attempts to the machine, and disabled SSLv3 in Apache server to
 prevent POODLE attack.
+
+###Lab 7 - KDE, VNC, and Virtual Machines
+Installed *KDE Plasma* GUI Desktop environment, *TigerVNC* server and *TightVNC* client to connect to the machine remotely, and *Oracle VM VirtualBox*
+to run VMs of other Operating Systems on the machine.
 
 ## Known Issues
 *   index.php - Background transition CSS effect causes a fade from white when first opening the page.
