@@ -149,14 +149,40 @@ class SQLQuery {
             boolean option selected
     */
     public function getOption($email, $option) {
-        $params = array(':email' => $email, ':option' => $option);
-        $stmt = "SELECT :option FROM `$this->tablename` WHERE email = :email LIMIT 1";
+        $params = array(':email' => $email);
+        $stmt = "SELECT * FROM `$this->tablename` WHERE email = :email LIMIT 1";
         $result = $this->sql->query($params, $stmt);
 
         if(empty($result))
             return false;
 
         return (bool) $result[0][$option];
+    }
+
+    /*
+        Modify the given option for the user with the given email address
+        Params:
+            $email - email string
+            $option - option string (optionA, optionB, etc.)
+            $optionValue - the new value for the option
+    */
+    public function setOption($email, $option, $optionValue) {
+        $optionValue = $optionValue ? 1 : 0;
+
+        $params = array(':email' => $email, ":optionValue" => $optionValue);
+        $stmt = "UPDATE `$this->tablename` SET $option = :optionValue WHERE email = :email";
+        $this->sql->query($params, $stmt);
+    }
+
+    /*
+        Remove the user with the given email address from the database
+        Params:
+            $email - email string
+    */
+    public function deleteUser($email) {
+        $params = array(':email' => $email);
+        $stmt = "DELETE FROM `$this->tablename` WHERE email = :email";
+        $this->sql->query($params, $stmt);
     }
 }
 ?>

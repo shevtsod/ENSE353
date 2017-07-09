@@ -16,12 +16,12 @@
 
 <div class="content" id="form-login">
     <h3>Sign Up/Login</h3>
-    <form method=POST action="login.php">
+    <form method="POST" action="login.php">
         <label for="email">Email:</label>
         <input id="email" type="text" name="email">
         <label for="password">Password:</label>
         <input id="password" type="password" name="password">
-        <input type="submit">
+        <input type="submit" value="Submit">
     </form>
 </div>
 

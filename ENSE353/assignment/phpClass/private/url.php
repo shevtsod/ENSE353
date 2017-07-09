@@ -17,5 +17,9 @@ class URL {
     public static function urlAdmin() {
         return self::URL_BASE . "admin.php";   
     }
+
+    public static function urlLogout() {
+        return self::URL_BASE . "logout.php";   
+    }
 }
 ?>
