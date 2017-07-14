@@ -71,10 +71,10 @@
             </div>
             <h4>Software Design and Architecture (Summer 2017)</h4>
             <ul>
+                <li><a href="ENSE353/assignment/index.php"><b>Subscription Service Assignment</b></a></li>
                 <li><a href="ENSE353/lab3/info.php">Lab 3 - PHPinfo</a></li>
                 <li><a href="phpmyadmin">Lab 4 - phpMyAdmin</a></li>
                 <li><a href="webmail">Lab 6 - Webmail</a></li>
-                <li><a href="ENSE353/assignment/index.php">Subscription Service Assignment</a></li>
             </ul>           
         </div>
     </div>

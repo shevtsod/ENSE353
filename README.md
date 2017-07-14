@@ -12,6 +12,7 @@ My work in the ENSE 353 (Software Design and Architecture) labs and assignments.
 > **Lab 5** - DNS and Let's Encrypt  
 > **Lab 6** - SMTP, IMAP, denyhosts, and POODLE Attack  
 > **Lab 7** - KDE, VNC, and Virtual Machines  
+> **Lab 8** - Turning the Machine Into a NAT Router  
 
 ## Details
 ### Assignment - LAMP Stack Email Subscription Service
@@ -43,6 +44,10 @@ prevent POODLE attack.
 ### Lab 7 - KDE, VNC, and Virtual Machines
 Installed *KDE Plasma* GUI Desktop environment, *TigerVNC* server and *TightVNC* client to connect to the machine remotely, and *Oracle VM VirtualBox*
 to run VMs of other Operating Systems on the machine.
+
+### Lab 8 - Turning the Machine Into a NAT Router
+Installed a PCIe network card into the machine, installed DHCP and configured network and firewall settings to turn
+the machine into a NAT router that other devices can connect to.
 
 ## Known Issues
 *   index.php - Background transition CSS effect causes a fade from white when first opening the page.
