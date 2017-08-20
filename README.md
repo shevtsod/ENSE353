@@ -1,8 +1,6 @@
 # ENSE353
 My work in the ENSE 353 (Software Design and Architecture) labs and assignments. Also includes past work done in CS215 (Web and Database Programming).
 
->**Have a look at the final product at <https://daniel.ursse.org>**
-
 ## Overview
 > **Assignment** - LAMP Stack Email Subscription Service  
 > **Lab 1** - CentOS Installation  
@@ -36,7 +34,7 @@ and installed SSL to self-sign a certificate for the server.
 Installed and configured a DNS server for the Linux machine and used it to obtain a domain name (provided by the instructor). 
 Cloned [Let's Encrypt Client (Certbot)](https://github.com/certbot/certbot) to obtain a valid certificate for the server from the Let's Encrypt CA.
 
-### Lab 6 - SMTP, IMAP denyhosts, and POODLE Attack
+### Lab 6 - SMTP, IMAP, denyhosts, and POODLE Attack
 Installed *sendmail* SMTP message transfer agent, *dovecot* IMAP server, and *squirrelmail* web email GUI to allow the Linux machine to
 send and receive emails. Installed denyhosts to prevent unwanted login attempts to the machine, and disabled SSLv3 in Apache server to
 prevent POODLE attack.
